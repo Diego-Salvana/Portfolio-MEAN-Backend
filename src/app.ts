@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 dbConnection()
-   .then(() => console.log('DB conectada'))
+   .then(() => console.log('DB conectada 📖'))
    .catch((err) => {
       console.log(err);
       throw new Error('Error al inicializar DB');
