@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const skills_controller_1 = require("../controllers/skills.controller");
+const session_middleware_1 = require("../middlewares/session.middleware");
+const validationSkill_middleware_1 = require("../middlewares/validationSkill.middleware");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.get('/', skills_controller_1.getSkills);
+router.get('/:id', skills_controller_1.getSkill);
+router.post('/', session_middleware_1.checkJwt, validationSkill_middleware_1.skillValidator, skills_controller_1.createSkill);
+router.put('/:id', session_middleware_1.checkJwt, validationSkill_middleware_1.skillValidator, skills_controller_1.updateSkill);
+router.delete('/:id', session_middleware_1.checkJwt, skills_controller_1.deleteSkill);
