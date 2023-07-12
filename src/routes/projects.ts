@@ -11,4 +11,4 @@ router.post('/', checkJwt, projectValidator, createProject);
 router.put('/:id', checkJwt, projectValidator, updateProject);
 router.delete('/:id', checkJwt, deleteProject);
 
-export { router };
+export default router ;

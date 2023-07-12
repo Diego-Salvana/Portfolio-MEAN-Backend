@@ -8,4 +8,4 @@ const router = Router();
 router.post('/login', loginValidator, loginCtrl);
 router.get('/refresh', checkJwt, refreshToken);
 
-export { router };
+export default router;

@@ -11,5 +11,5 @@ router.post('/', checkJwt, skillValidator, createSkill);
 router.put('/:id', checkJwt, skillValidator, updateSkill);
 router.delete('/:id', checkJwt, deleteSkill);
 
-export { router };
+export default router ;
 

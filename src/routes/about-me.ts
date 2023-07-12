@@ -8,4 +8,4 @@ const router = Router();
 router.get('/', getAbout);
 router.put('/:id', checkJwt, aboutValidator, updateAbout);
 
-export { router };
+export default router;

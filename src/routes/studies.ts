@@ -11,4 +11,4 @@ router.post('/', checkJwt, studyValidator, createStudy);
 router.put('/:id', checkJwt, studyValidator, updateStudy);
 router.delete('/:id', checkJwt, deleteStudy);
 
-export { router };
+export default router;
