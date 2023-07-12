@@ -1,12 +1,13 @@
 {
   "name": "portofolio-mean-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portafolio personal.",
+  "main": "./src/app.ts",
   "scripts": {
+    "start": "ts-node ./src/app.ts",
     "dev": "nodemon ./src/app.ts",
     "build": "tsc",
-    "start": "node ./dist/app.js"
+    "vercel-build": "echo without action"
   },
   "keywords": [],
   "author": "",
